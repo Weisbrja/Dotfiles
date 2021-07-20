@@ -1,6 +1,10 @@
 " force write
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
+" move lines
+vnoremap J :move '>+1<cr>gv=gv
+vnoremap K :move '<-2<cr>gv=gv
+
 " disable highlighting search results
 nnoremap // :nohlsearch<cr>
 
