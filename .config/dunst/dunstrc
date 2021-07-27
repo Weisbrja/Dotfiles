@@ -1,6 +1,6 @@
 [global]
 	# font
-	font = iosevka 9
+	font = FiraCode 10
 
 	# size
 	geometry = "320x8-0"
@@ -30,7 +30,7 @@
 	# do not remove notifications if idle
 	idle_threshold = 120
 
-	# sorty notifications by urgency
+	# sort notifications by urgency
 	sort = yes
 
 [urgency_low]
