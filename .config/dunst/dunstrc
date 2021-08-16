@@ -1,6 +1,6 @@
 [global]
 	# font
-	font = FiraCode 10
+	font = FiraCode 8
 
 	# size
 	geometry = "320x8-0"

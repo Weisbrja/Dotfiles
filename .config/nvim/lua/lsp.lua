@@ -1,7 +1,8 @@
 local fn = vim.fn
+local lsp = require "lspconfig"
 
 -- lua
-require 'lspconfig'.sumneko_lua.setup {
+lsp.sumneko_lua.setup {
 	cmd = {'lua-language-server'},
 	settings = {
 		Lua = {
@@ -25,12 +26,15 @@ require 'lspconfig'.sumneko_lua.setup {
 }
 
 -- html
-require 'lspconfig'.html.setup {
+lsp.html.setup {
 	cmd = {'vscode-html-languageserver', '--stdio'}
 }
 
 -- c/c++
-require 'lspconfig'.clangd.setup {}
+lsp.clangd.setup {}
 
 -- latex
-require 'lspconfig'.texlab.setup {}
+lsp.texlab.setup {}
+
+-- rust
+lsp.rust_analyzer.setup{}

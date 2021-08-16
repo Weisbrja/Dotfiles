@@ -29,7 +29,7 @@ alias updm='sudo reflector --country Germany --latest 20 --sort rate --protocol 
 
 # suckless
 alias i='sudo make clean install; sudo make clean'
-alias c='nvim config.def.h'
+alias ch='nvim config.def.h'
 
 # note
 alias note="cd $HOME/Notes; nvim"
@@ -38,3 +38,6 @@ alias note="cd $HOME/Notes; nvim"
 alias newmain="cp $HOME/Templates/LaTeX/Document/main.tex ."
 alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex main.tex"
 alias newpres="cp $HOME/Templates/LaTeX/Presentation/* ."
+
+# rust
+alias c='cargo'
