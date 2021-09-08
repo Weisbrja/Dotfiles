@@ -32,12 +32,12 @@ alias i='sudo make clean install; sudo make clean'
 alias ch='nvim config.def.h'
 
 # note
-alias note="cd $HOME/Notes; nvim"
+alias note="cd $HOME/notes; nvim"
 
 # latex
-alias newmain="cp $HOME/Templates/LaTeX/Document/main.tex ."
-alias newshort="cp $HOME/Templates/LaTeX/Document/short.tex main.tex"
-alias newpres="cp $HOME/Templates/LaTeX/Presentation/* ."
+alias newmain="cp $HOME/templ/latex/doc/main.tex ."
+alias newshort="cp $HOME/templ/latex/doc/short.tex main.tex"
+alias newpres="cp $HOME/templ/latex/pres/* ."
 
 # rust
 alias c='cargo'
