@@ -9,6 +9,9 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+# new st window in current directory
+bindkey -s '^n' 'st & disown\n'
+
 # use lf to switch directories with <c-o>
 lfcd()
 {

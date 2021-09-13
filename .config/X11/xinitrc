@@ -14,17 +14,17 @@ fi
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # xresources
-[ -f "${XDG_CONFIG_HOME:-"$HOME/.config"}/X11/Xresources" ] && xrdb "${XDG_CONFIG_HOME:-"$HOME/.config"}/X11/Xresources" &
+[ -f "${XDG_CONFIG_HOME:-"$HOME/.config"}/X11/Xresources" ] && xrdb "${XDG_CONFIG_HOME:-"$HOME/.config"}/X11/Xresources"
 
 # compositor
 picom &
 
 # wallpaper
 #xwallpaper --zoom "$HOME/pics/walls/green.jpg" &
-hsetroot &
+hsetroot
 
 # blue light filter
-redshift -O 3500 &
+redshift -O 3500
 
 # status bar
 dwmblocks &
