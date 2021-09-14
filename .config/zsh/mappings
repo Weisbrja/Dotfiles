@@ -10,7 +10,7 @@ zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # new st window in current directory
-bindkey -s '^n' 'st & disown\n'
+bindkey -s '^n' 'st 2> /dev/null & disown\n'
 
 # use lf to switch directories with <c-o>
 lfcd()
