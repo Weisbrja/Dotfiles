@@ -2,20 +2,10 @@
 
 printf ' ^c%s^Bat ' "$(xgetres foreground)"
 
-for battery in '/sys/class/power_supply/BAT'*
+for battery in '/sys/class/power_supply/BAT'?
 do
 	capacity="$(cat "$battery/capacity")"
-
-	status="$(cat "$battery/status")"
-	case "$status" in
-		'Full') status='F' ;;
-		'Discharging')
-			status='-'
-			[ "$capacity" -lt 20 ] && dunstify -u critical -h string:x-dunst-stack-tag:battery 'Battery' "$capacity%" ;;
-		'Charging') status='+' ;;
-		'Not charging') status='0' ;;
-		'Unknown') status='?' ;;
-	esac
+	status="$(sed 's/Full/F/;s/Discharging/-/;s/Charging/+/;s/Not charging/N/;s/Unknown/?/' "$battery/status")"
 
 	printf '^c%s^%3s%% %s ' "$(xgetres color3)" "$capacity" "$status"
 done
