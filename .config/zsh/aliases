@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+# ls
 alias ls='exa --color=auto --group-directories-first'
 alias la='ls -a'
 alias l='ls -la'
@@ -7,17 +8,20 @@ alias ll='ls -l'
 alias lt='ls -Ta'
 alias llt='ls -T'
 
+# color
+alias ip='ip --color=auto'
+alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias d='disown'
-
+# renames
 alias v='nvim'
 alias pdf='zathura'
 alias img='sxiv'
+alias d='disown'
 
-# copy and paste to clipboard
+# clipboard
 alias xclip='xclip -selection clipboard'
 
 # dotfiles
@@ -36,8 +40,7 @@ alias note="cd $HOME/notes; nvim"
 
 # latex
 alias newmain="cp $HOME/templ/latex/doc/main.tex ."
-alias newshort="cp $HOME/templ/latex/doc/short.tex main.tex"
-alias newpres="cp $HOME/templ/latex/pres/* ."
+alias newpres="cp $HOME/templ/latex/pres/main.tex ."
 
 # rust
 alias c='cargo'
